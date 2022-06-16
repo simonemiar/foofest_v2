@@ -1,0 +1,15 @@
+@use "../base/color";
+
+.timer_container {
+  margin-top: 2.5rem;
+
+  h3 {
+    margin-top: 0.2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .timer_container {
+    margin-inline: 2rem;
+  }
+}

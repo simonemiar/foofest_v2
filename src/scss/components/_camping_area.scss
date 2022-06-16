@@ -1,0 +1,62 @@
+@use "../base/color";
+
+#camping-area_section {
+  background-color: color.$darkblue;
+
+  #camping-area_main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0.7rem;
+  }
+
+  p {
+    color: color.$white;
+  }
+
+  label {
+    color: color.$white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+
+  .info {
+    text-align: left;
+    padding: 0.7rem;
+  }
+
+  .option {
+    text-align: left;
+    margin-bottom: 1rem;
+
+    p {
+      margin-left: 1.4rem;
+      margin-top: 0.2rem;
+    }
+  }
+
+  #top-bar {
+    padding: 0.7rem;
+    background-color: color.$transparentblue;
+    text-align: left;
+  }
+
+  .area_map {
+    // width: 14rem;
+    height: 14rem;
+    // background-color: color.$white;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #camping-area_section {
+    #camping-area_main-content {
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+  }
+}

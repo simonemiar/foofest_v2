@@ -1,0 +1,76 @@
+@use "../base/color";
+
+.ticket_cart {
+  background-color: color.$darkblue;
+
+  .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem;
+    background-color: #34334d;
+
+    p {
+      color: color.$white;
+    }
+
+    p:nth-child(1) {
+      text-align: left;
+    }
+    p:nth-child(2) {
+      text-align: center;
+    }
+    p:nth-child(3) {
+      text-align: right;
+    }
+  }
+}
+
+.ticket_cart_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem;
+
+  p {
+    color: color.$white;
+  }
+
+  .ticket_name {
+    text-align: left;
+
+    p:nth-child(2) {
+      padding-top: 0.1rem;
+    }
+  }
+
+  .ticket_price {
+    text-align: right;
+
+    p:nth-child(2) {
+      padding-top: 0.1rem;
+    }
+  }
+
+  .amount_ui {
+    text-align: center;
+    #ticket_decre {
+      background-color: #34334d;
+      padding: 7px;
+      // border: none;
+      text-align: center;
+      color: color.$white;
+    }
+
+    #amount {
+      color: color.$white;
+      padding-inline: 0.4rem;
+    }
+
+    #ticket_incre {
+      background-color: color.$transparentblue;
+      padding: 7px;
+      // border: none;
+      text-align: center;
+      color: color.$white;
+    }
+  }
+}

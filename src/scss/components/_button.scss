@@ -1,0 +1,52 @@
+@use "../base/color";
+@use "../base/fonts";
+
+.back_btn {
+  width: 5.5rem;
+  height: 1.875rem;
+  background-color: color.$darkblue;
+  color: color.$white;
+  border: 1px solid color.$orange;
+  cursor: pointer;
+}
+
+.continue_btn,
+.ticket a {
+  width: 5.5rem;
+  height: 1.875rem;
+  background-color: color.$orange;
+  color: color.$darkblue;
+  border: none;
+  cursor: pointer;
+}
+
+.ticket a {
+  padding: 0.3rem 0.8rem;
+  transition: 0.5s;
+}
+
+.ticket a:hover {
+  background-color: color.$purple;
+  color: color.$white;
+}
+
+button {
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  color: color.$white;
+  background-color: color.$darkblue;
+  border: 1px solid color.$orange;
+  transform: scale(1.1);
+}
+
+#home #header_section .section_wrapper .schedule-btn:hover,
+.back_btn:hover {
+  color: color.$darkblue;
+  background-color: color.$orange;
+  transform: scale(1.1);
+  // border: 1px solid color.$orange;
+}
