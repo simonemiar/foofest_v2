@@ -20,18 +20,32 @@ function NavBar() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/schedule" className="nav-links active" onClick={handleClick}>
+            <NavLink
+              to="/schedule"
+              className="nav-links active"
+              onClick={handleClick}
+            >
               Schedule
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/tickets" className="nav-links active" onClick={handleClick}>
+            <NavLink
+              to="/tickets"
+              className="nav-links active"
+              onClick={handleClick}
+            >
               Tickets
             </NavLink>
           </li>
         </ul>
         {/* The onClick here set if the nav list should be shown */}
-        <input className="nav-icon" onClick={handleClick} id="menu__toggle" type="checkbox" />
+        <input
+          className="nav-icon"
+          checked={click}
+          onClick={handleClick}
+          id="menu__toggle"
+          type="checkbox"
+        />
         <label className="menu__btn" htmlFor="menu__toggle">
           <span></span>
         </label>

@@ -11,18 +11,23 @@
 
     img:nth-child(1) {
       grid-column: 1/2;
+      padding: 5px;
     }
     img:nth-child(2) {
       grid-column: 2/3;
+      padding: 5px;
     }
     img:nth-child(3) {
       grid-column: 3/4;
+      padding: 5px;
     }
     img:nth-child(4) {
       grid-column: 4/5;
+      padding: 5px;
     }
     img:nth-child(5) {
       grid-column: 5/6;
+      padding: 5px;
     }
   }
 
@@ -90,7 +95,7 @@
     display: grid;
     justify-content: center;
     h2 {
-      text-align: center;
+      // text-align: center;
       margin-bottom: 1rem;
     }
 
@@ -119,6 +124,7 @@
     .stage_icon {
       width: 4rem;
       margin-block: 1rem;
+      height: 75px;
     }
 
     #stages_container {
