@@ -71,7 +71,7 @@
       }
       .booking-btn {
         width: 7.5rem;
-        height: 1.875rem;
+        height: 100%;
         background-color: color.$orange;
         color: color.$darkblue;
         border: none;
@@ -80,7 +80,7 @@
 
       .schedule-btn {
         width: 7.5rem;
-        height: 1.875rem;
+        height: 100%;
         background-color: color.$darkblue;
         color: color.$white;
         border: 1px solid color.$orange;
@@ -91,7 +91,6 @@
 
   #intro_section {
     margin-top: 4rem;
-    margin-inline: 3rem;
     display: grid;
     justify-content: center;
     h2 {
@@ -186,6 +185,11 @@
       // margin: 0px !important;
       width: 30rem;
       height: 25rem;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 

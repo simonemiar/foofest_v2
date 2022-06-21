@@ -14,11 +14,13 @@ function NavBar() {
         </NavLink>
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li className="nav-item">
+          {/* removing the home navlink */}
+          {/* <li className="nav-item">
             <NavLink to="/" className="nav-links active" onClick={handleClick}>
               Home
             </NavLink>
-          </li>
+          </li> */}
+
           <li className="nav-item">
             <NavLink
               to="/schedule"

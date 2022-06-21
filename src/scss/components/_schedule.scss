@@ -4,6 +4,10 @@ h1 {
   padding: 20px;
 }
 
+.schedule_text {
+  text-align: center;
+}
+
 #schedule_section {
   margin: 0px 20px;
 
@@ -97,6 +101,7 @@ h1 {
     white-space: nowrap;
     table-layout: fixed;
     display: flex;
+    box-shadow: inset -15px 0px 7px -7px color.$darkblue;
 
     .artists:nth-child(2n) .artist {
       opacity: 0;
@@ -145,11 +150,12 @@ h1 {
             float: right;
             font-size: 0.9rem;
             padding: 5px;
+            background-color: color.$transparentblue;
+            font-family: "Lato", serif;
+            font-size: 0.77rem;
           }
           button:hover {
             background-color: color.$orange;
-            // color: color.$orange;
-            border: 1px solid color.$orange;
           }
         }
 

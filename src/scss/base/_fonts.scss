@@ -4,12 +4,12 @@
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: calc(0.7rem + (10 - 2.5) * ((100vw - 300px) / (1600 - 300)));
-  // font-size: calc(0.8rem + (10 - 2.5) * ((100vw - 300px) / (1600 - 300)));
   color: color.$white;
+  line-height: 1.8rem;
 }
 
 %table-text-font {
-  font-family: "Lato", sans-serif;
+  font-family: "Unna", sans-serif;
   font-weight: 400;
   font-size: calc(0.8rem + (10 - 2.5) * ((100vw - 300px) / (1600 - 300)));
   color: color.$white;
@@ -56,13 +56,13 @@
 
 p,
 a,
-th,
-details {
+details,
+button {
   @extend %body-text-font;
 }
 
 td,
-table {
+th {
   @extend %table-text-font;
 }
 

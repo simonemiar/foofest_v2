@@ -44,8 +44,12 @@ export default function Home() {
           <h2>WHAT IS FOO FESTIVAL?</h2>
 
           <p>
-            Midgard is the focal point of the Foo Festival and is also the biggest stage. This is where the bigger national and international names appear, so the genre itself may well change a lot in the course of a day. Stage
-            can accommodate 23,000 audiences. Here, genre ranges from classical Trad jazz, New Orleans jazz & Early jazz to more modern and newer genres.
+            Midgard is the focal point of the Foo Festival and is also the
+            biggest stage. This is where the bigger national and international
+            names appear, so the genre itself may well change a lot in the
+            course of a day. Stage can accommodate 23,000 audiences. Here, genre
+            ranges from classical Trad jazz, New Orleans jazz & Early jazz to
+            more modern and newer genres.
           </p>
         </article>
 
@@ -63,18 +67,28 @@ export default function Home() {
               <img className="stage_icon" src={StagePiano} alt={StagePiano} />
             </div>
             <p>
-              Midgard is the focal point of the Foo Festival and is also the biggest stage. This is where the bigger national and international names appear, so the genre itself may well change a lot in the course of a day. Stage
-              can accommodate 23,000 audiences. Here, genre ranges from classical Trad jazz, New Orleans jazz & Early jazz to more modern and newer genres.
+              Midgard is the focal point of the Foo Festival and is also the
+              biggest stage. This is where the bigger national and international
+              names appear, so the genre itself may well change a lot in the
+              course of a day. Stage can accommodate 23,000 audiences. Here,
+              genre ranges from classical Trad jazz, New Orleans jazz & Early
+              jazz to more modern and newer genres.
             </p>
           </div>
           <div className="stage">
             <h3>VANEHEIM</h3>
             <div className="stage_img">
-              <img className="stage_icon" src={StageTrumpet} alt={StageTrumpet} />
+              <img
+                className="stage_icon"
+                src={StageTrumpet}
+                alt={StageTrumpet}
+              />
             </div>
             <p>
-              Vaneheim is the festival's second largest stage. The stage has room for 16,000 spectators, here the focus is on diversity which adds up to a dance or two. Often this is where you can experience swing music and more
-              big band Jazz.
+              Vaneheim is the festival's second largest stage. The stage has
+              room for 16,000 spectators, here the focus is on diversity which
+              adds up to a dance or two. Often this is where you can experience
+              swing music and more big band Jazz.
             </p>
           </div>
           <div className="stage">
@@ -83,8 +97,11 @@ export default function Home() {
               <img className="stage_icon" src={StageBas} alt={StageBas} />
             </div>
             <p>
-              Is our smallest stage, with the possibility of 5,000 spectators. The stage is intended for a more intimate audience in enigmatic surroundings. We see Jotunheim as the most experimental scene. Here you can meet
-              everything from erratic free jazz and Avant garde, to Modern / Contemporary Jazz.
+              Is our smallest stage, with the possibility of 5,000 spectators.
+              The stage is intended for a more intimate audience in enigmatic
+              surroundings. We see Jotunheim as the most experimental scene.
+              Here you can meet everything from erratic free jazz and Avant
+              garde, to Modern / Contemporary Jazz.
             </p>
           </div>
         </article>

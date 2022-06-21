@@ -10,7 +10,6 @@
   top: 0;
   z-index: 20;
   padding: 0.5rem;
-  // box-shadow: 0px 15px 20px color.$darkblue;
 }
 
 .nav-container {
@@ -64,6 +63,11 @@
 }
 
 .nav-item:hover:after {
+  width: 100%;
+  background: color.$white;
+}
+
+.nav-item:focus .nav-item:active {
   width: 100%;
   background: color.$white;
 }

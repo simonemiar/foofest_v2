@@ -16,7 +16,9 @@ export default function ScheduleDetails(props) {
   // Here we are fetcting the band data form the API, and setting the states of the band array.
   useEffect(() => {
     async function get() {
-      const res = await fetch("https://prototype-masters-foofest.herokuapp.com/bands");
+      const res = await fetch(
+        "https://prototype-masters-foofest.herokuapp.com/bands"
+      );
       const data = await res.json();
       setBand(data);
     }
@@ -134,11 +136,14 @@ export default function ScheduleDetails(props) {
         >
           {props.daySchedule}
         </h2>
-        <article id="details_section" style={{ display: showScheduleMore ? "block" : "none" }}>
+        <article
+          id="details_section"
+          style={{ display: showScheduleMore ? "block" : "none" }}
+        >
           <table>
             <thead>
               <tr>
-                <th>TIME KL: </th>
+                <th>TIME</th>
               </tr>
               <tr>
                 <th className="stage">MIDGARD</th>
