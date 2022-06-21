@@ -44,12 +44,15 @@ export default function Home() {
           <h2>WHAT IS FOO FESTIVAL?</h2>
 
           <p>
-            Midgard is the focal point of the Foo Festival and is also the
-            biggest stage. This is where the bigger national and international
-            names appear, so the genre itself may well change a lot in the
-            course of a day. Stage can accommodate 23,000 audiences. Here, genre
-            ranges from classical Trad jazz, New Orleans jazz & Early jazz to
-            more modern and newer genres.
+            Foo Festival tager Jazzmusikken retur på dagsordnen og lader den
+            udfolde og eksperimentere i et gådefuldt miljø. Her får den brede
+            musikstil, som bliver præget af kompleks harmoni, synkoperede rytmer
+            og stor vægt på improvisation, mulighed for at at skabe et kulturelt
+            miljø, hvor der er plads til alt det vi elsker ved genren jazz, men
+            også at afprøve ens nysgerrighed for andre undergenre af jazzen.
+            udover fokus på musikken, så vægter fællesskabet, bæredygtigheden,
+            samtalerne og oplevelsen af at mennesker mødes også utroligt højt
+            hos Foo Festival .
           </p>
         </article>
 
