@@ -52,7 +52,7 @@ export default function Ticket(props) {
               return <li>{old}</li>;
             })}
           </ul>
-          <div className="flex">
+          <div className="flex_card">
             <h3>PRICE: {props.ticketInfo.ticketPrice}</h3>
             <div className="ticket_btn">
               <Link
