@@ -1,13 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 // import ReactCardFlip from "react-card-flip";
 import { Link } from "react-router-dom";
 import party from "party-js";
+import regularImage from "../../assets/img/regular_ticket.png";
+import vipImage from "../../assets/img/vip_ticket.png";
 
 import { TicketBasketContext } from "../../contexts/TicketBasketContext";
 
 export default function Ticket(props) {
   // const [isFlipped, setIsFlipped] = useState(false);
   const { setTicketBasket } = useContext(TicketBasketContext);
+  const [flip, setFlip] = useState(false);
 
   // function handleClick(e) {
   //   setIsFlipped((prevState) => !prevState);
@@ -31,20 +34,22 @@ export default function Ticket(props) {
 
   return (
     <article className="ticket">
-      {/* We are using React-card-flip and it only works if there is two boxing inside it. */}
-      {/* <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical"> */}
-      <div className="ticket_svg">
-        <div className="ticket_content">
+      <div
+        className={`card ${flip ? `flip` : ""}`}
+        onClick={() => setFlip(!flip)}
+      >
+        <div className="front">
+          <img src={regularImage} alt={vipImage} />
+          <h4>FOO FESTIVAL</h4>
           <h2>{props.ticketType}</h2>
-          <h3>FooFest 2022</h3>
-          <h4>{props.ticketPrice} DKK</h4>
+
+          <ul>
+            <li>•</li>
+            <li>•</li>
+            <li>•</li>
+          </ul>
+          <h5>{props.ticketPrice}</h5>
           <div className="ticket_btn">
-            {/* If the btn is clicked, the card will turn to the other side */}
-            {/* <button type="primary" onClick={handleClick}>
-              Read more
-            </button>
-            OR */}
-            {/* Here are we adding the selected ticket to the ticketBasket, and going the the basket page. */}
             <Link
               onClick={(e) => {
                 party.confetti(e.target, {
@@ -58,36 +63,18 @@ export default function Ticket(props) {
               className="btn"
               to="/basket"
             >
-              Buy
+              BUY TICKET
             </Link>
           </div>
+          {/* <div className="flashcard-options">
+          {flashcard.options.map((option) => {
+            return <div className="flashcard-option">{option}</div>;
+          })}
+        </div> */}
         </div>
+        <div className="back"></div>
+        {/* {flip ? flashcard.answer : flashcard.question} */}
       </div>
-
-      {/* <div className="ticket_svg">
-        <div className="ticket_content">
-          <p>
-            This is a {props.ticketType} ticket to FooFest 2022 - Jazz festival. The ticket cost
-            {props.ticketPrice} DKK, and is a big nice festival with big artist.
-          </p>
-          <div className="ticket_btn">
-            <button type="primary" onClick={handleClick}>
-              Read less
-            </button>
-            OR
-            <Link
-              onClick={(e) => {
-                party.confetti(e.target, { count: party.variation.range(100, 200) });
-                addTicketTypeToBasket();
-              }}
-              to="/basket"
-            >
-              Buy
-            </Link>
-          </div>
-        </div>
-      </div> */}
-      {/* </ReactCardFlip> */}
     </article>
   );
 }
