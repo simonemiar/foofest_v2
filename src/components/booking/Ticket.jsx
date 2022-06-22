@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 // import ReactCardFlip from "react-card-flip";
 import { Link } from "react-router-dom";
 import party from "party-js";
-import regularImage from "../../assets/img/regular_ticket.png";
 import vipImage from "../../assets/img/vip_ticket.png";
 
 import { TicketBasketContext } from "../../contexts/TicketBasketContext";
@@ -42,7 +41,7 @@ export default function Ticket(props) {
         onClick={() => setFlip(!flip)}
       >
         <div className="front">
-          <img src={props.ticketInfo.img} alt={vipImage} />
+          <img src={props.ticketInfo.img} alt={props.ticketInfo.img} />
           <h4>FOO FESTIVAL</h4>
           <h2>{props.ticketInfo.ticketType}</h2>
           {/* trying to map through li items, not working, coming out in the console */}
