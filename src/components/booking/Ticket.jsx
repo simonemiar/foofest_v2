@@ -2,8 +2,6 @@ import { useContext, useState } from "react";
 // import ReactCardFlip from "react-card-flip";
 import { Link } from "react-router-dom";
 import party from "party-js";
-import vipImage from "../../assets/img/vip_ticket.png";
-
 import { TicketBasketContext } from "../../contexts/TicketBasketContext";
 
 export default function Ticket(props) {
