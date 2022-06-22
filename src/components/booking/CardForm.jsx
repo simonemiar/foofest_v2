@@ -25,13 +25,16 @@ export default function CardForm(props) {
     function fullfillSpot() {
       const reserveSpotId = { id: ticketBasket.reserveSpotId };
       const postFullfillSpot = JSON.stringify(reserveSpotId);
-      fetch("https://prototype-masters-foofest.herokuapp.com/fullfill-reservation", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: postFullfillSpot,
-      })
+      fetch(
+        "https://prototype-masters-foofest.herokuapp.com/fullfill-reservation",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: postFullfillSpot,
+        }
+      )
         .then((response) => console.log(response))
         .then((data) => console.log(data))
         .catch((err) => console.error(err));
@@ -82,9 +85,9 @@ export default function CardForm(props) {
     // With a ternaire operator we setting - in the card input.
     cardInput.current.value = !cardValue[2]
       ? cardValue[1]
-      : `${cardValue[1]}-${cardValue[2]}${`${cardValue[3] ? `-${cardValue[3]}` : ""}`}${`${
-          cardValue[4] ? `-${cardValue[4]}` : ""
-        }`}`;
+      : `${cardValue[1]}-${cardValue[2]}${`${
+          cardValue[3] ? `-${cardValue[3]}` : ""
+        }`}${`${cardValue[4] ? `-${cardValue[4]}` : ""}`}`;
     // The total input, and storing the input in the state.
     const numbers = cardInput.current.value.replace(/(\D)/g, "");
     setCard(numbers);
@@ -97,9 +100,13 @@ export default function CardForm(props) {
 
   // Check if the date length is 5, and if ture then focus on the next input.
   function handleDateInput() {
-    const dateValue = dateInput.current.value.replace(/\D/g, "").match(/(\d{0,2})(\d{0,2})/);
+    const dateValue = dateInput.current.value
+      .replace(/\D/g, "")
+      .match(/(\d{0,2})(\d{0,2})/);
     // With a ternaire operator we setting - in the card input.
-    dateInput.current.value = !dateValue[2] ? dateValue[1] : `${dateValue[1]}/${dateValue[2]}`;
+    dateInput.current.value = !dateValue[2]
+      ? dateValue[1]
+      : `${dateValue[1]}/${dateValue[2]}`;
     // The total input, and storing the input in the state.
     const numbers = dateInput.current.value.replace(/(\D)/g, "");
 

@@ -20,18 +20,28 @@ export default function TicketDetails(props) {
     props.setIsCurrent(props.isCurrent + 1);
 
     // Here are we taking the values from the forms and creating a object.
-    const persons = [...formElm.current.querySelectorAll("[data-person]")].map((fieldset) => {
-      const fullname = fieldset.querySelector("[name=fullname]").value;
-      const email = fieldset.querySelector("[name=email]").value;
-      const phone_code = fieldset.querySelector("[name=phone_code]").value;
-      const phone_num = fieldset.querySelector("[name=phone_num]").value;
-      const phone_number = phone_code + phone_num;
-      const street = fieldset.querySelector("[name=street]").value;
-      const zip_code = fieldset.querySelector("[name=zip_code]").value;
-      const city = fieldset.querySelector("[name=city]").value;
-      const country = fieldset.querySelector("[name=country]").value;
-      return { fullname, email, phone_number, street, zip_code, city, country };
-    });
+    const persons = [...formElm.current.querySelectorAll("[data-person]")].map(
+      (fieldset) => {
+        const fullname = fieldset.querySelector("[name=fullname]").value;
+        const email = fieldset.querySelector("[name=email]").value;
+        const phone_code = fieldset.querySelector("[name=phone_code]").value;
+        const phone_num = fieldset.querySelector("[name=phone_num]").value;
+        const phone_number = phone_code + phone_num;
+        const street = fieldset.querySelector("[name=street]").value;
+        const zip_code = fieldset.querySelector("[name=zip_code]").value;
+        const city = fieldset.querySelector("[name=city]").value;
+        const country = fieldset.querySelector("[name=country]").value;
+        return {
+          fullname,
+          email,
+          phone_number,
+          street,
+          zip_code,
+          city,
+          country,
+        };
+      }
+    );
 
     // Here are we updating the ticketBasket with the persons object.
     setTicketBasket((old) => {

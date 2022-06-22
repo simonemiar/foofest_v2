@@ -8,7 +8,8 @@ export default function TicketCart(props) {
 
   // Here are we calculating the total price of the tickets in the basket
   const totalTicketPrize =
-    ticketBasket.ticketPrice * ticketBasket.ticketAmount + ticketBasket.bookingFee;
+    ticketBasket.ticketPrice * ticketBasket.ticketAmount +
+    ticketBasket.bookingFee;
 
   return (
     <section className="ticket_cart">
@@ -32,11 +33,17 @@ export default function TicketCart(props) {
           <h5>Ticket</h5>
         </div>
         <div className="amount_ui">
-          <button onClick={() => removeTicket(ticketBasket, setTicketBasket)} id="ticket_decre">
+          <button
+            onClick={() => removeTicket(ticketBasket, setTicketBasket)}
+            id="ticket_decre"
+          >
             -
           </button>
           <span id="amount">{ticketBasket.ticketAmount}</span>
-          <button onClick={() => addTicket(ticketBasket, setTicketBasket)} id="ticket_incre">
+          <button
+            onClick={() => addTicket(ticketBasket, setTicketBasket)}
+            id="ticket_incre"
+          >
             +
           </button>
         </div>

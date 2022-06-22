@@ -36,41 +36,42 @@ export default function Ticket(props) {
     <article className="ticket">
       <div
         className={`card ${flip ? `flip` : ""}`}
+        style={{
+          backgroundColor: props.ticketInfo.color,
+        }}
         onClick={() => setFlip(!flip)}
       >
         <div className="front">
-          <img src={regularImage} alt={vipImage} />
+          <img src={props.ticketInfo.img} alt={vipImage} />
           <h4>FOO FESTIVAL</h4>
-          <h2>{props.ticketType}</h2>
-
+          <h2>{props.ticketInfo.ticketType}</h2>
+          {/* trying to map through li items, not working, coming out in the console */}
           <ul>
-            <li>•</li>
-            <li>•</li>
-            <li>•</li>
+            {console.log("all info", props.ticketInfo.info)}
+            {props.ticketInfo.info.map((old) => {
+              return <li>{old}</li>;
+            })}
           </ul>
-          <h5>{props.ticketPrice}</h5>
-          <div className="ticket_btn">
-            <Link
-              onClick={(e) => {
-                party.confetti(e.target, {
-                  shapes: ["star"],
-                  count: party.variation.range(50, 200),
-                  size: party.variation.range(1, 2),
-                  speed: party.variation.range(100, 1000),
-                });
-                addTicketTypeToBasket();
-              }}
-              className="btn"
-              to="/basket"
-            >
-              BUY TICKET
-            </Link>
+          <div className="flex">
+            <h3>PRICE: {props.ticketInfo.ticketPrice}</h3>
+            <div className="ticket_btn">
+              <Link
+                onClick={(e) => {
+                  party.confetti(e.target, {
+                    shapes: ["star"],
+                    count: party.variation.range(50, 200),
+                    size: party.variation.range(1, 2),
+                    speed: party.variation.range(100, 1000),
+                  });
+                  addTicketTypeToBasket();
+                }}
+                className="btn"
+                to="/basket"
+              >
+                BUY TICKET
+              </Link>
+            </div>
           </div>
-          {/* <div className="flashcard-options">
-          {flashcard.options.map((option) => {
-            return <div className="flashcard-option">{option}</div>;
-          })}
-        </div> */}
         </div>
         <div className="back"></div>
         {/* {flip ? flashcard.answer : flashcard.question} */}

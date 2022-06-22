@@ -15,7 +15,8 @@ import QuantityLine from "./QuantityLine";
 
 export default function BasketOverview(props) {
   const { ticketBasket, setTicketBasket } = useContext(TicketBasketContext);
-
+  // const whatever = useContext(TicketBasketContext).ticketBasket
+  
   // Here are we setting if the tent is selected or not
   const [toggleTent2Person, setToggleTent2Person] = useState(false);
   const [toggleTent3Person, setToggleTent3Person] = useState(false);

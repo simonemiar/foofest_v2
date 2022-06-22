@@ -7,7 +7,13 @@ export default function PersonDetails(props) {
         </article>
         <div className="fullname">
           <label htmlFor="fullname">Fullname</label>
-          <input type="text" id="fullname" name="fullname" placeholder="&nbsp;" required />
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="&nbsp;"
+            required
+          />
         </div>
         <div className="email">
           <label htmlFor="email">E-mail</label>
@@ -45,7 +51,13 @@ export default function PersonDetails(props) {
         </div>
         <div className="street">
           <label htmlFor="street">Street</label>
-          <input type="text" id="street" name="street" placeholder="&nbsp;" required />
+          <input
+            type="text"
+            id="street"
+            name="street"
+            placeholder="&nbsp;"
+            required
+          />
         </div>
         <div className="zip_city">
           <div className="zip_code">
@@ -63,12 +75,24 @@ export default function PersonDetails(props) {
           </div>
           <div className="city">
             <label htmlFor="city">City</label>
-            <input type="text" id="city" name="city" placeholder="&nbsp;" required />
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="&nbsp;"
+              required
+            />
           </div>
         </div>
         <div className="country">
           <label htmlFor="country">Country</label>
-          <input type="text" id="country" name="country" placeholder="&nbsp;" required />
+          <input
+            type="text"
+            id="country"
+            name="country"
+            placeholder="&nbsp;"
+            required
+          />
         </div>
       </fieldset>
     </>
